@@ -1,0 +1,24 @@
+-vm
+
+touch aws-demo.pem
+vi aws-demo.pem
+chmod 400 aws-demo.pem
+ssh -i "aws-demo.pem" ec2-user@ec2-54-172-117-56.compute-1.amazonaws.com
+
+-ec2-user
+
+sudo adduser shafiq
+sudo su - shafiq
+
+-user
+
+mkdir .ssh
+chmod 700 .ssh
+cd .ssh
+touch authorized_keys
+chmod 600 authorized_keys
+vi authorized_keys
+   
+-vm
+
+ssh -i "aws-demo.pem" shafiq@ec2-54-172-117-56.compute-1.amazonaws.com
